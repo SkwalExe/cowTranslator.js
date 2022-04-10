@@ -4,6 +4,14 @@
 
 JavaScript library to translate cow language 🐄 to text
 
+# jsDelivr 
+
+
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/SkwalExe/cowTranslator.js@main/src/cowTranslator.min.js"></script>
+```
+
 # Usage 📝
 
 This library provices 2 functions:
