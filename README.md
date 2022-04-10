@@ -1,18 +1,17 @@
-# ProgramName
+# CowTranslator.js 🐄
 
 ![](images/1.png)
 
-Description
-
-# Installation 📦
-
-Installation instructions
+JavaScript library to translate cow language 🐄 to text
 
 # Usage 📝
 
-How to use the program
+This library provices 2 functions:
+- `cowToText` : translate cow language to text
+- `textToCow` : translate text to cow language
 
-![](images/usage.png)
+![](images/2.png)
+
 
 # final
 
