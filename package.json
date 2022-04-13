@@ -10,9 +10,6 @@
         "type": "git",
         "url": "git+https://github.com/SkwalExe/cowTranslator.js.git"
     },
-    "publishConfig": {
-        "@SkwalExe:registry": "https://npm.pkg.github.com"
-    },
     "keywords": [
         "fun",
         "cow",
