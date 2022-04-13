@@ -1,0 +1,26 @@
+{
+  "name": "cow-translator",
+  "version": "1.0.0",
+  "description": "Javascript library to translate cow language to text",
+  "main": "src/cowTranslator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkwalExe/cowTranslator.js.git"
+  },
+  "keywords": [
+    "fun",
+    "cow",
+    "translator",
+    "skwalexe",
+    "encoding"
+  ],
+  "author": "Léopold Koprivnik Ibghy <skwal.net@gmail.com> (https://github.com/SkwalExe/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkwalExe/cowTranslator.js/issues"
+  },
+  "homepage": "https://github.com/SkwalExe/cowTranslator.js#readme"
+}

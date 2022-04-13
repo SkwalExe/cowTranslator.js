@@ -1,21 +1,21 @@
-let cowTranslator = class {
+let CowTranslator = {
 
-    static translationResult = class {
+    TranslationResult: class {
         text = ""; // human language
         cow = ""; // cow language
         error = ""; // error / warning message
         warning = false; // if any warning was found
         success = false; // if the translation was successful
-    }
+    },
 
-    static SUPPORTED_CHARS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+    SUPPORTED_CHARS: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
         's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
         'S', 'T', 'U', 'cV', 'W', 'X', 'Y', 'Z', ' ', '.', ',', '!', '?', ':', ';', '"', '\'', '`',
         '~', '\\', '/', '|', '=', '-', '_', '+', '(', ')', '[', ']', '{', '}', '\n', '\t', '\r',
-    ];
+    ],
 
-    static MOO = "moooooo"
+    MOO: "moooooo",
 
 
     // This function will
@@ -24,7 +24,7 @@ let cowTranslator = class {
     // => "mooOoOo"
     //        ↓ ↓
     // => "0001010"
-    static stringToBinString(input) {
+    stringToBinString: function(input) {
         var output = "";
 
         input.split("").forEach(function(char) {
@@ -33,16 +33,16 @@ let cowTranslator = class {
             // checks if the char is uppercase
         })
         return output;
-    }
+    },
 
     // This function will
     //
     // convert a binary string to a decimal number
     // => "0001010"
     // => 10
-    static binStringToDecimal(input) {
+    binStringToDecimal: function(input) {
         return parseInt(input, 2);
-    }
+    },
 
 
     // This function will :
@@ -68,7 +68,7 @@ let cowTranslator = class {
     // => "0001111"
     //        ↓↓↓↓
     // => "mooOOOO"
-    static addToStringLikeBinary(input, toAdd) {
+    addToStringLikeBinary: function(input, toAdd) {
         var output = "";
         var inputAsBin;
         var inputAsDecimal;
@@ -106,13 +106,13 @@ let cowTranslator = class {
         }
 
         return output;
-    }
+    },
 
 
 
-    static textToCow(input) {
+    textToCow: function(input) {
 
-        var result = new this.translationResult();
+        var result = new this.TranslationResult();
         result.text = input;
         if (!input) {
             console.warn("No text specified");
@@ -160,12 +160,12 @@ let cowTranslator = class {
         result.success = true;
 
         return result;
-    }
+    },
 
-    static cowToText(input) {
+    cowToText: function(input) {
 
 
-        var result = new this.translationResult();
+        var result = new this.TranslationResult();
         result.cow = input;
 
         if (!input) {
@@ -209,7 +209,7 @@ let cowTranslator = class {
 
             inputAsText += this.SUPPORTED_CHARS[mooAsDecimal];
 
-        }, this)
+        }, this);
 
         if (errors == moosVec.length) {
             result.error = "No supperted characters found";
@@ -222,4 +222,9 @@ let cowTranslator = class {
 
         return result;
     }
+}
+
+
+if (typeof module != "undefined") {
+    exports = module.exports = CowTranslator;
 }
