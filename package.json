@@ -1,26 +1,33 @@
 {
-    "name": "cow-translator",
-    "version": "1.0.0",
-    "description": "Javascript library to translate cow language to text",
-    "main": "src/cowTranslator.js",
-    "scripts": {
-        "test": "exit 0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SkwalExe/cowTranslator.js.git"
-    },
-    "keywords": [
-        "fun",
-        "cow",
-        "translator",
-        "skwalexe",
-        "encoding"
-    ],
-    "author": "Léopold Koprivnik Ibghy <skwal.net@gmail.com> (https://github.com/SkwalExe/)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/SkwalExe/cowTranslator.js/issues"
-    },
-    "homepage": "https://github.com/SkwalExe/cowTranslator.js#readme"
+  "name": "cow-translator",
+  "version": "1.1.0",
+  "description": "Javascript library to translate cow language to text",
+  "main": "src/cowTranslator.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "npm run lint && browserify -s CowTranslator src/index.js | uglifyjs -c > dist/cow-translator.min.js",
+    "lint": "eslint src/**.js src/**/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkwalExe/cowTranslator.js.git"
+  },
+  "keywords": [
+    "fun",
+    "cow",
+    "translator",
+    "skwalexe",
+    "encoding"
+  ],
+  "author": "Léopold Koprivnik Ibghy <skwal.net@gmail.com> (https://github.com/SkwalExe/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkwalExe/cowTranslator.js/issues"
+  },
+  "homepage": "https://github.com/SkwalExe/cowTranslator.js#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "eslint": "^8.14.0",
+    "uglify-js": "^3.15.4"
+  }
 }
